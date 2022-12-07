@@ -41,18 +41,6 @@ namespace ProjectFirma.Web.Common
 
         public static readonly TimeSpan HttpRuntimeExecutionTimeout = ((HttpRuntimeSection)WebConfigurationManager.GetSection("system.web/httpRuntime")).ExecutionTimeout;
 
-        public static readonly string PsInfoUrl = SitkaConfiguration.GetRequiredAppSetting("PsInfoUrl");
-        public static readonly string PsInfoDataCenterUrl = SitkaConfiguration.GetRequiredAppSetting("PsInfoDataCenterUrl");
-        public static readonly string VitalSignsUrl = SitkaConfiguration.GetRequiredAppSetting("VitalSignsUrl");
-        public static readonly string NEPAtlasUrl = SitkaConfiguration.GetRequiredAppSetting("NEPAtlasUrl");
-        public static readonly string ActionAgendaUrl = SitkaConfiguration.GetRequiredAppSetting("ActionAgendaUrl");
-        public static readonly string OngoingProgramsUrl = SitkaConfiguration.GetRequiredAppSetting("OngoingProgramsUrl");
-        public static readonly string PSARDashboardUrl = SitkaConfiguration.GetRequiredAppSetting("PSARDashboardUrl");
-        public static readonly string SpatialHubUrl = SitkaConfiguration.GetRequiredAppSetting("SpatialHubUrl");
-        public static readonly string PsInfoPostOrganizationUrl = SitkaConfiguration.GetRequiredAppSetting("PsInfoPostOrganizationUrl");
-        public static readonly string PsInfoApiKey = SitkaConfiguration.GetRequiredAppSetting("PsInfoApiKey");
-
-
         public static readonly string KeystoneUserProfileUrl = SitkaConfiguration.GetRequiredAppSetting("KeystoneUserProfileUrl");
         public static readonly string KeystoneInviteUserUrl = SitkaConfiguration.GetRequiredAppSetting("KeystoneInviteUserUrl");
         public static readonly Guid KeystoneWebServiceApplicationGuid = Guid.Parse(SitkaConfiguration.GetRequiredAppSetting("KeystoneWebServiceApplicationGuid"));

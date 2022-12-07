@@ -63,36 +63,7 @@ Source code is available upon request via <support@sitkatech.com>.
             <div class="optionalContainer">
                 <div class="row">
                     <div class="headerText col-sm-12 col-md-7">
-                        @if (ViewDataTyped.TenantName == "ActionAgendaForPugetSound")
-                        {
-                            <nav class="navbar projectFirmaNavbar actionAgendaCustomSiteExplorer">
-                                <ul class="nav navbar-nav navbar-left">
-                                    <li>
-                                        <a class="siteLink" href="@FirmaWebConfiguration.PsInfoUrl">Puget Sound Info</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle navigation-root-item" data-toggle="dropdown" role="button" aria-expanded="true"><span class="glyphicon glyphicon-menu-down"></span></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li class=""><a title="About Puget Sound Info" href="@string.Format("{0}About", FirmaWebConfiguration.PsInfoUrl)" class="navigation-dropdown-item">About Puget Sound Info</a></li>
-                                            <li class="divider"></li>
-                                            <li class=""><a title="Action Agenda" href="@FirmaWebConfiguration.ActionAgendaUrl" class="navigation-dropdown-item">Action Agenda Online</a></li>
-                                            <li class=""><a title="NEP Atlas" href="@FirmaWebConfiguration.NEPAtlasUrl" class="navigation-dropdown-item">NEP Atlas</a></li>
-                                            <li class=""><a title="Ongoing Programs" href="@FirmaWebConfiguration.OngoingProgramsUrl" class="navigation-dropdown-item">Ongoing Programs</a></li>
-                                            <li class=""><a title="PSAR Dashboard" href="@FirmaWebConfiguration.PSARDashboardUrl" class="navigation-dropdown-item">PSAR Dashboard</a></li>
-                                            <li class=""><a title="Vital Signs" href="@FirmaWebConfiguration.VitalSignsUrl" class="navigation-dropdown-item">Vital Signs</a></li>
-                                            <li class=""><a title="Spatial Hub" href="@FirmaWebConfiguration.SpatialHubUrl" class="navigation-dropdown-item">Spatial Hub</a></li>
-                                            <li class="divider"></li>
-                                            <li class=""><a title="Data Center" href="@FirmaWebConfiguration.PsInfoDataCenterUrl" class="navigation-dropdown-item">Data Center</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menuDivider"></li>
-                                    <li>
-                                        <a class="siteLink" href="@ViewDataTyped.FirmaHomeUrl" title="Action Agenda">Action Agenda</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        }
-                        else if (ViewDataTyped.TenantName == "NCRPProjectTracker")
+                        @if (ViewDataTyped.TenantName == "NCRPProjectTracker")
                         {
                             <div style="display: flex; align-items: center; flex-wrap: wrap">
                                 <a href="@FirmaWebConfiguration.NCRPHomeUrl">

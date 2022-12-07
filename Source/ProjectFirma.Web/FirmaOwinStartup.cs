@@ -311,11 +311,6 @@ namespace ProjectFirma.Web
             if (sendNewOrganizationNotification)
             {
                 SendNewOrganizationCreatedMessage(person, keystoneUserClaims.LoginName);
-                // Post new Organization to ProjectFirma
-                if (person.Tenant.AreOrganizationsExternallySourced)
-                {
-                    PostOrganizationToExternalSystem(organization).ContinueWith(t => Console.WriteLine(t.Exception), TaskContinuationOptions.OnlyOnFaulted);
-                }
             }
 
             return HttpRequestStorage.Person;
@@ -348,20 +343,6 @@ namespace ProjectFirma.Web
                 HttpRequestStorage.DatabaseEntities.SaveChanges(newFirmaSession.Person);
             }
         }
-
-        private static async Task PostOrganizationToExternalSystem(Organization organization)
-        {
-            var tenant = HttpRequestStorage.Tenant;
-            if (tenant.TenantID == Tenant.ActionAgendaForPugetSound.TenantID)
-            {
-                var organizationPostDto = new OrganizationDto(organization);
-                var client = new HttpClient();
-                await client.PostAsJsonAsync(
-                    $"{FirmaWebConfiguration.PsInfoPostOrganizationUrl}/{FirmaWebConfiguration.PsInfoApiKey}",
-                    organizationPostDto);
-            }
-        }
-
 
         private static void SendNewUserCreatedMessage(Person person, string loginName)
         {
